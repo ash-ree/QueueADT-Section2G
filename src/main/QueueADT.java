@@ -45,9 +45,11 @@ public class QueueADT
 	boolean isEmpty()
 
 	{
-		if(rear == -1&&front == -1) {
+		if(rear == -1&&front == -1)
+			return true;
+		else
 			return false;
-		}
+
 	}
 
 	boolean isFull()
