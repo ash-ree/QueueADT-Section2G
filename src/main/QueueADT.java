@@ -21,11 +21,18 @@ public class QueueADT
 		return deleted;
 	}
 
-	int peek()
+	int peek(int index)
 	{
 		int item = 0;
-
+		if(! isEmpty()) {
+			item = queue[index];
 		return item;
+		}
+		else {
+			System.out.println("Queue is Empty");
+			return 0;
+		}
+
 	}
 
 	int size()
@@ -36,8 +43,11 @@ public class QueueADT
 	}
 
 	boolean isEmpty()
+
 	{
-		return false;
+		if(rear == -1&&front == -1) {
+			return false;
+		}
 	}
 
 	boolean isFull()
